@@ -1,0 +1,44 @@
+pnpm add typescript@5.9.3 @types/node@24 -D
+pnpm add prettier@3.8.1 eslint@9.39.2 -D
+pnpm add -D tsx@4.21.0 // Para ficar monitorando as mudanças da aplicação
+
+
+git init após criar o .gitignore
+
+npx tsc --init
+
+tsconfig.json:
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "module": "nodenext",
+    "target": "es2024", //ESM
+    "moduleResolution": "nodenext",
+    "skipLibCheck": true,
+    "strict": true,
+    "outDir": "./dist"
+  },
+  "include": ["src"]
+}
+
+
+package.json
+{
+  "name": "bootcamp treinos app",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.30.3",
+  "devDependencies": {
+    "@types/node": "24",
+    "eslint": "9.39.2",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  }
+}
