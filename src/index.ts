@@ -18,6 +18,8 @@ const app = Fastify({
   logger: true,
 });
 
+console.log(process.env.DATABASE_URL);
+
 app.setValidatorCompiler(validatorCompiler);
 app.setSerializerCompiler(serializerCompiler);
 
